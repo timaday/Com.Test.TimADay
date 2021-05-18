@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="3.12.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="90.0.4430.2400" />
+    <PackageReference Include="SpecFlow" Version="3.7.13" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.7.141" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.7.13" />
+    <PackageReference Include="SpecRun.SpecFlow" Version="3.7.3" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\BookingAPITest.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <Generator>SpecFlow.Tools.MsBuild.Generation</Generator>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\OnlineStoreUITest.feature">
+      <Generator Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">SpecFlow.Tools.MsBuild.Generation</Generator>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Folder Include="APIs\Models\" />
+    <Folder Include="Hooks\" />
+  </ItemGroup>
+
+</Project>
