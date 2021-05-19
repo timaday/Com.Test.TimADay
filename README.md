@@ -1,5 +1,11 @@
 # Com.Test.TimADay
-C# = Specflow, Selenium, Restsharp, Nunit
+**C#** = Specflow, Selenium, Restsharp, Nunit
+
+Specflow test can be run via the command line, also the solutions requires selenium to be running on the machine.
+
+https://www.selenium.dev/downloads/
+
+ChromeDriver.exe has been added to the repo for simplicity.
 
 ### Task 1
 - Order T-Shirt and Verify in Order History
@@ -16,5 +22,6 @@ This runs well within Visual Studio, unfortunately I ran out of time to sort out
 - Create Booking
 - Update Booking
 - Delete Booking
+
 Restsharp was used to create the api class to drive the actions. I would build a configuration class which could be passed to is for long term maintanability.
-Steps have been simplified to keep the tests readable and effiecent.
+Steps have been simplified to keep the tests readable and effiecent. I added the health check as a given step to ping the api before each test, can be added as a background depending on your flavor.
