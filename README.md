@@ -16,7 +16,7 @@ tags: web
 These tests use selenium to conduct the test and utilise the page object model in the process. 
 Since we are using spec flow I have added the setup and teardown of the selenium chrome driver in the hooks.
 With more time I would create a class to manage the driver and pass it to the context class for better maintanability.
-This runs well within Visual Studio, unfortunately I ran out of time to sort out reporting via the commandline - Hope I have shown you enough
+This runs well within Visual Studio, next I would focus on reporting by setting up html report and integrate reporting with test management tool.
 
 ### Task 2
 - Create Booking
